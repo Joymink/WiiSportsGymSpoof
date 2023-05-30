@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Wii Sport's Gym</title>
+</head>
+<body>
+    <!-- Top portion plus side nav -->
+    <nav class="title-nav">
+        <h1><a class="home" href="#home">Real Wii&trade; Sports Gym</a></h1>
+    </nav> 
+
+    <div class="menu">
+        <label class="hamburger-menu">
+        <input type="checkbox">
+        </label>
+        <aside class="sidebar">
+        <nav>
+            <div class="Tabs" ><a href="#about">About</a></div>
+            <div class="Tabs"><a href="traincontact.html">Trainers</a></div>
+            <div class="Tabs"><a href="#Classes">Classes</a></div>
+            <div class="Tabs"><a href="#Events">Events</a></div>
+            <div class ="Tabs"><a href="#Contact">Contact</a></div>
+        </nav>
+        </aside>
+    </div>
+    <!-- Main portion -->
+    <div class="main-page">
+      
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="static/Background photos/Baseball.webp" style="width:100%">
+              <div class="text">Baseball</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="static/Background photos/bowling.webp" style="width:100%">
+              <div class="text">Bowling</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="static/Background photos/tennis.webp" style="width:100%">
+              <div class="text">Tennis</div>
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+            
+            <script>
+            let slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+              setTimeout(showSlides, 4000); // Change image every 2 seconds
+            }
+            </script>
+     <!-- About -->
+        <div class="about" id="about">
+            <h3>About</h3>
+            <p class="paragraph">This is a video game brought to life through fitness. All of your
+                favorite games from Wii sports used to train and develop a physique that you only
+                thought was possible through a video game. Mixing fitness with virutal reality, makes This
+                the perfect place to train.
+            </p>
+        </div>
+        
+        <div class="grid-container">
+            <div class="Classes" id="Classes">Classes</div>
+            <div class="images-container">
+                <div class="photo">
+                    <a href=""><img src="static/Sports/Wii-Baseball.png" alt="Baseball" width="300px"></a>
+                </div>
+                <div class="photo">
+                    <a href=""><img src="static/Sports/Wii-Bowling.png" alt="Wii-Bowling" width="300px"></a>
+                </div>
+                <div class="photo">
+                    <a href=""><img src="static/Sports/Wii-boxing.png" alt="Boxing" width="300px"></a>
+                </div>
+                <div class="photo">
+                    <a href=""><img src="static/Sports/Wii-Golf.png" alt="Golf" width="300px"></a>
+                </div>
+                <div class="photo">
+                    <a href=""><img src="static/Sports/Wii-Tennis.png" alt="Tennis" width="300px"></a>
+                </div>
+            </div>
+        </div>
+ 
+        <footer>
+            <div class="foot"> &copy; All photos taken off of Google. Website Created by Jayden. Inspired by Wii &trade; Sports</div>
+        </footer>
+    </div>
+
+
+</body>
+</html>
